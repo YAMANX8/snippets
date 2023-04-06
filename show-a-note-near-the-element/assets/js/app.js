@@ -7,31 +7,58 @@
    *
    * Both elements: elem and anchor must be in the document
    */
+/* with absolute scroll */
 function positionAt(anchor, position, elem) {
     // ... your code ...
     let cords = anchor.getBoundingClientRect();
     switch (position) {
         case "top":
-            elem.style.top = `${cords.y - elem.offsetHeight}px`;
-            elem.style.left = `${cords.left}px`;
+            elem.style.top = `${cords.top + window.scrollY - elem.offsetHeight}px`;
+            elem.style.left = `${cords.left + window.scrollX}px`;
             break;
         case "right":
-            elem.style.top = `${cords.y}px`;
-            elem.style.left = `${cords.right}px`;
+            elem.style.top = `${cords.y + window.scrollY}px`;
+            elem.style.left = `${cords.right + window.scrollX}px`;
             break;
         case "bottom":
-            elem.style.top = `${cords.bottom}px`;
-            elem.style.left = `${cords.left}px`;
+            elem.style.top = `${cords.bottom + window.scrollY}px`;
+            elem.style.left = `${cords.left + window.scrollX}px`;
             break;
 
         default:
-            elem.style.top = `${cords.top}px`;
-            elem.style.left = `${cords.left - elem.offsetWidth}px`;
+            elem.style.top = `${cords.top + window.scrollY}px`;
+            elem.style.left = `${cords.left + window.scrollX - elem.offsetWidth}px`;
             break;
     }
-
-    console.log(cords);
+    // we just add "window.scrollX/Y in absolute version of this task"
 }
+/* with fixed scrolling */
+// function positionAt(anchor, position, elem) {
+//     // ... your code ...
+//     let cords = anchor.getBoundingClientRect();
+//     switch (position) {
+//         case "top":
+//             elem.style.top = `${cords.top - elem.offsetHeight}px`;
+//             elem.style.left = `${cords.left}px`;
+//             break;
+//         case "right":
+//             elem.style.top = `${cords.y}px`;
+//             elem.style.left = `${cords.right}px`;
+//             break;
+//         case "bottom":
+//             elem.style.top = `${cords.bottom}px`;
+//             elem.style.left = `${cords.left}px`;
+//             break;
+
+//         default:
+//             elem.style.top = `${cords.top}px`;
+//             elem.style.left = `${cords.left - elem.offsetWidth}px`;
+//             break;
+//     }
+
+//     console.log(cords);
+// }
+
 
 /**
  * Shows a note with the given html at the given position

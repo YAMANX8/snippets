@@ -1,5 +1,7 @@
 # THIS IS TEMPLATE
+
 ## REMEMBER
+
 - do not forget to use 'clamp' for the variable things
 - so, this is the best way to make the responsive typography ' font-size: clamp(min_size, prefered_size, max_size); '
 - this is the best way to make the width of an element responsive ' width: min(min_width - padding, max_width); '

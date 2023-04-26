@@ -1,0 +1,23 @@
+@use "../util/" as *;
+.card {
+  background-color: #333;
+  border-radius: rem(5);
+  padding: rem(16);
+  text-align: center;
+  width: clamp(rem(300), rem(350), rem(1000));
+  box-shadow: 0 0 20px #111;
+  &-txt {
+    color: #fff;
+    word-break: break-all;
+    margin-bottom: rem(36);
+    opacity: 0;
+    &--fade {
+      opacity: 1;
+      transition: opacity 1s;
+    }
+  }
+  &-title {
+    color: aqua;
+    margin-bottom: rem(10);
+  }
+}

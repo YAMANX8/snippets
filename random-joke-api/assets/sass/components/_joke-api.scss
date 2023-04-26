@@ -1,0 +1,8 @@
+@use "../util" as *;
+.joke-api {
+  background-color: orange;
+  min-height: 100vh;
+  padding-inline: rem(36);
+  display: grid;
+  place-content: center;
+}

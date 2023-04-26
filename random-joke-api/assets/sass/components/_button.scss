@@ -1,0 +1,8 @@
+@use "../util/" as *;
+.btn {
+  background-color: aqua;
+  padding: rem(16);
+  border-radius: rem(10);
+  outline: 0;
+  border: 0;
+}

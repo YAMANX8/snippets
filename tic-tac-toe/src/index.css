@@ -6,6 +6,9 @@ body {
   font-family: sans-serif;
   margin: 20px;
   padding: 0;
+  display: grid;
+  place-content: center;
+  min-height: 75vh;
 }
 
 h1 {
@@ -60,15 +63,16 @@ body {
   background: #fff;
   border: 1px solid #999;
   float: left;
-  font-size: 24px;
+  font-size: 4rem;
   font-weight: bold;
   line-height: 34px;
-  height: 34px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 7rem;
+  cursor: pointer;
+  aspect-ratio: 1/1;
 }
 
 .board-row:after {
@@ -79,6 +83,7 @@ body {
 
 .status {
   margin-bottom: 10px;
+  color: rgb(0, 236, 142);
 }
 .game {
   display: flex;

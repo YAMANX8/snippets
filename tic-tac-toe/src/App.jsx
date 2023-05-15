@@ -42,7 +42,7 @@ export default function Board() {
 }
 function Square({ value, hundler }) {
   return (
-    <button className="square" onClick={hundler}>
+    <button className="square" onClick={hundler} style={{color:value=="X"?"red":"blue"}}>
       {value}
     </button>
   );
